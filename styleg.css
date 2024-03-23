@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  background-color: #ffc0cb;
+}
+
+.left-nav {
+  background-color: #ca1871; /* Dark Pink */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.left-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-nav ul li {
+  margin-bottom: 10px;
+}
+
+.left-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header {
+  background-color: #ffc0cb; /* Baby Pink */
+  text-align: center;
+  padding: 100px 0;
+}
+
+.logo {
+  width: 50%;
+  max-height: 50vh; 
+  display: block;
+  margin: 0 auto;
+}
+
+.company-info {
+  font-size: 30px;
+  color: #333;
+}
+
+.main {
+  background-color: #f195a4; /* Baby Pink */
+  padding: 50px 0;
+}
+
+.features {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.features h2 {
+  margin-bottom: 30px;
+}
+
+.feature {
+  margin-bottom: 40px;
+}
+
+.contact-us {
+  background-color: #f195a4; /* Light Grey */
+  text-align: center;
+  padding: 50px 0;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
