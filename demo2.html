@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preference Selection</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        .btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e6509f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Select Your Preference</h2>
+    <button class="btn" onclick="selectHire()">Willing to Hire</button>
+    <button class="btn" onclick="selectGetHired()">Willing to Get Hired</button>
+</div>
+
+<script>
+    function selectHire() {
+        // Code to handle selection of "Willing to Hire"
+        alert("You selected 'Willing to Hire'");
+        // You can redirect the user to another page or perform other actions here
+    }
+
+    function selectGetHired() {
+        // Code to handle selection of "Willing to Get Hired"
+        alert("You selected 'Willing to Get Hired'");
+        // You can redirect the user to another page or perform other actions here
+    }
+</script>
+
+</body>
+</html>
