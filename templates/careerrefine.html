@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Choice Refinement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        select, input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ca1871;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ca1871;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Career Choice Refinement</h1>
+    <form id="careerForm">
+        <label for="redirecttoind">Select Industry:</label>
+        <select id="redirecttoind" onchange="redirecttopage()">
+            <option value="">SELECT</option>
+            <option value="/it">Information Technology</option>
+            <option value="/finance">Finance</option>
+            <option value="/healthcare">Healthcare</option>
+            <option value="/engineering">Engineering</option>
+            <option value="/manufacturing">Manufacturing</option>
+            <option value="/marketing">Marketing</option>
+        </select>
+
+        <button type="submit">Refine Choices</button>
+    </form>
+</div>
+
+<script>
+    function redirecttopage(){
+        var dropdown=document.getElementById("redirecttoind");
+        var selectedvalue=dropdown.options[dropdown.selectedIndex].value;
+        if (selectedvalue !==""){
+            window.location.href=selectedvalue;
+        }
+    }
+    
+</script>
+
+</body>
+</html>

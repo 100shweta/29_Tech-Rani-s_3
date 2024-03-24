@@ -14,17 +14,15 @@ mysql = MySQL(app)
 def home():
     return render_template('homepg.html')
 
-@app.route('/login',methods=['POST'])
+@app.route('/login',methods=['GET','POST'])
 def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        
         cur = mysql.connection.cursor()
-        cur.execute("SELECT * FROM users WHERE username = %s AND password = %s", (username, password))
+        cur.execute("SELECT * FROM Users WHERE username = %s AND password = %s", (username, password))
         user = cur.fetchone()
         cur.close()
-
         if user:
             return redirect(url_for('dashboard'))
         else:
@@ -42,7 +40,6 @@ def registerhere():
         mysql.connection.commit()
         cur.close()
 
-        #return redirect(url_for('/preferences'))
     return render_template('registerhere.html')
 
 @app.route('/preferences')
@@ -65,8 +62,6 @@ def company():
         mysql.connection.commit()
         cur.close()
 
-        #return redirect(url_for('/preferences'))
-
     return render_template('company.html')
 
 @app.route('/employee',methods=['GET', 'POST'])
@@ -78,13 +73,49 @@ def employee():
         address= request.form['address']
         depart= request.form['depart']
         design= request.form['design']
+        qualifications=request.form['qualifications']
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO Employee ('Full_name', 'email_id, phone_no, address, depart, design) VALUES (%s, %s, %s, %s, %s, %s)", (Full_name, email_id, phone_no, address, depart, design))
+        cur.execute("INSERT INTO Employee (Full_name,email_id, phone_no, address, depart, design, qualifications) VALUES (%s, %s, %s, %s, %s, %s, %s)", (Full_name, email_id, phone_no, address, depart, design, qualifications))
         mysql.connection.commit()
         cur.close()
-        print('done')
     return render_template('employee.html')
 
+@app.route('/it')
+def it():
+    return render_template('it.html')
+
+@app.route('/finance')
+def finance():
+    return render_template('finance.html')
+
+@app.route('/healthcare')
+def healthcare():
+    return render_template('healthcare.html')
+
+@app.route('/engineering')
+def engineering():
+    return render_template('engineering.html')
+
+@app.route('/manufacturing')
+def manufacturing():
+    return render_template('manufacturing.html')
+
+@app.route('/marketing')
+def marketing():
+    return render_template('marketing.html')
+
+@app.route('/itcom')
+def itcom():
+    return render_template('itcom.html')
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
+
+
+@app.route('/resume')
+def resume():
+    return render_template('resume.html')
 
 
 if __name__ == '__main__':

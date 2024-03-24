@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preference Selection</title>
+    <style>
+        
+        body {
+            background-image: url('jobenvironment.png');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+           
+            margin: 0;
+            padding: 0; 
+            font-family: Arial, sans-serif; 
+
+
+
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            }
+        .container {
+            background-color: #f4f4f4;
+            border: 25px;
+            border: 2px solid #000; 
+            padding: 20px;
+            width: 400px; 
+            height: 200px;   border-color: black;
+            text-align: center;
+        }
+        .btn {
+            background-color: black;
+            color: white;
+            padding: 20px 20px;
+            border: black;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin:  10px;
+           
+        }
+        .btn:hover {
+            background-color: black;
+        }
+    
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Select Your Preference</h2>
+    <button class="btn" onclick="redirectToComPage()">Willing to hire</button>
+
+    
+    <button class="btn" onclick="redirectToEmpPage()">Willing to be hired</button>
+</div>
+
+<script>
+     function redirectToComPage() {
+            window.alert("YOU HAVE SELECTED WILLING TO HIRE");
+            window.location.href = "/company";
+        }
+
+        // Function to redirect to second HTML file
+        function redirectToEmpPage() {
+            window.alert("YOU HAVE SELECTED WILLING TO BE HIRED");
+            window.location.href = "/employee";}
+</script>
+
+</body>
+</html>
